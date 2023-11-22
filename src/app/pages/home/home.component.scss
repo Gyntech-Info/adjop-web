@@ -2,18 +2,38 @@
   display: flex;
   flex-direction: column;
   &__banner {
-    height: 25rem;
+    height: 30rem;
+    aw-banner {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__description {
     height: 25rem;
+    aw-description {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__videos {
     height: 25rem;
+    aw-videos {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__news {
     height: 25rem;
+    aw-news {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__about {
     height: 25rem;
+    aw-about-us {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
