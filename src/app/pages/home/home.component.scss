@@ -1,0 +1,19 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  &__banner {
+    height: 25rem;
+  }
+  &__description {
+    height: 25rem;
+  }
+  &__videos {
+    height: 25rem;
+  }
+  &__news {
+    height: 25rem;
+  }
+  &__about {
+    height: 25rem;
+  }
+}

@@ -1,18 +1,13 @@
 .app {
-  display: grid;
-  grid-template:
-    "header" 10%
-    "main" 80%
-    "footer" 10% /100%;
+  display: flex;
+  flex-direction: column;
   &__header {
-    grid-area: header;
     background-color: #323941;
   }
   &__main {
-    grid-area: main;
+    background-color: #000;
   }
   &__footer {
-    grid-area: footer;
     background-color: #323941;
   }
 }
