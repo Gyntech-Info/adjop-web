@@ -1,0 +1,17 @@
+.app {
+  display: grid;
+  grid-template:
+    "header" 10%
+    "main" 80%
+    "footer" 10% /100%;
+  &__header {
+    grid-area: header;
+    background-color: darkgray;
+  }
+  &__main {
+    grid-area: main;
+  }
+  &__footer {
+    grid-area: footer;
+  }
+}

@@ -9,5 +9,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './banner.component.scss'
 })
 export class BannerComponent {
-
 }
