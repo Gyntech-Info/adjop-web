@@ -1,2 +1,15 @@
 .header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &__logo {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    transition: all 2s cubic-bezier(.4,0,.2,1);
+  }
+  &__logo:hover {
+    color: #ff0101;
+  }
 }

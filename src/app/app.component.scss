@@ -6,12 +6,13 @@
     "footer" 10% /100%;
   &__header {
     grid-area: header;
-    background-color: darkgray;
+    background-color: #323941;
   }
   &__main {
     grid-area: main;
   }
   &__footer {
     grid-area: footer;
+    background-color: #323941;
   }
 }

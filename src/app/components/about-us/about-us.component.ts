@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'aw-home',
+  selector: 'aw-about-us',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  templateUrl: './about-us.component.html',
+  styleUrl: './about-us.component.scss'
 })
-export class HomeComponent {
+export class AboutUsComponent {
 
 }

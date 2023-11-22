@@ -1,0 +1,10 @@
+.banner {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  &__image {
+    height: 25rem;
+  }
+}

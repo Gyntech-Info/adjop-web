@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.scss'
+  styleUrl: './banner.component.scss',
 })
 export class BannerComponent {
+  public imagePath = '../../../../assets/images/logo.jpg';
 }

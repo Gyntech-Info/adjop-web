@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
-
-import { HomeComponent } from "./home/home.component";
+import { AboutUsComponent } from './about-us/about-us.component';
+import { DescriptionComponent } from './description/description.component';
+import { NewsComponent } from './news/news.component';
+import { VideosComponent } from './videos/videos.component';
 
 @NgModule({
   imports: [
-    HomeComponent
+    AboutUsComponent,
+    DescriptionComponent,
+    NewsComponent,
+    VideosComponent,
   ],
   exports: [
-    HomeComponent
-  ]
+    AboutUsComponent,
+    DescriptionComponent,
+    NewsComponent,
+    VideosComponent,
+  ],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}
