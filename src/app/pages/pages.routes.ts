@@ -6,4 +6,14 @@ export const pagesRoutes: Routes = [
     path: '',
     component: HomePage,
   },
+  {
+    path: 'unidades',
+    loadChildren: () =>
+      import('./units/units.module').then((m) => m.UnitsModule),
+  },
+  {
+    path: 'departamentos',
+    loadChildren: () =>
+      import('./departments/departments.module').then((m) => m.DepartmentsModule),
+  },
 ];
