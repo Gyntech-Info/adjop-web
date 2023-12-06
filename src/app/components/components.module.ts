@@ -18,4 +18,4 @@ import { VideosComponent } from './videos/videos.component';
     VideosComponent,
   ],
 })
-export class ComponentsModule {}
+export class ComponentsModule { }

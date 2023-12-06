@@ -8,4 +8,4 @@ import { pagesRoutes } from './pages.routes';
   imports: [RouterModule.forChild(pagesRoutes), HomePage],
   exports: [HomePage],
 })
-export class PagesModule {}
+export class PagesModule { }
