@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { CoreModule } from "./core/core.module";
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { CoreModule } from './core/core.module';
 
 @Component({
   selector: 'aw-root',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    CoreModule
-  ],
+  imports: [CommonModule, CoreModule, RouterModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'adjop-web';
