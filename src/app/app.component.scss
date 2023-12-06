@@ -3,6 +3,11 @@
   flex-direction: column;
   &__header {
     background-color: #323941;
+    &__nav {
+      display: flex;
+      width: 15rem;
+      justify-content: space-evenly;
+    }
   }
   &__main {
     background-color: #000;
