@@ -1,17 +1,12 @@
 .banner {
-  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  &__image {
-    height: 25rem;
-  }
+  height: auto;
+  padding: 5rem;
 }
 
-@media (max-width: 768px){
-  .banner {
-    &__image {
-      height: 13rem;
-    }
-  }
-}
+// @media (max-width: 768px) {
+//   .banner {
+//   }
+// }

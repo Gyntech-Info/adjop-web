@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './banner.component.scss',
 })
 export class BannerComponent {
-  public imagePath = '../../../../assets/images/logo.jpg';
+ 
 }

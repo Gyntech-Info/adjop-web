@@ -1,11 +1,7 @@
 .home {
-  display: flex;
-  flex-direction: column;
   &__banner {
-    height: 30rem;
-    aw-banner {
-      display: flex;
-      justify-content: center;
+    &__image {
+      width: 15rem;
     }
   }
   &__description {

@@ -10,4 +10,6 @@ import { ComponentsModule } from '../../components/components.module';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomePage {}
+export class HomePage {
+  public imagePath = '../../../../assets/images/logo-white.png';
+}
