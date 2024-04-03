@@ -1,0 +1,65 @@
+
+aw-carousel {
+    width: 100%;
+}
+
+.carrousel-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1160px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+
+.carrossel-item {
+    display: flex;
+    .items:hover {
+        outline: aquamarine;
+        border: 2px solid aquamarine;
+        scale: 1.05;
+    }
+}
+
+.items {
+    width: 365px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 544px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./asset/Cards.jpg");
+    border-bottom-left-radius: 250px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.42);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.left-button,
+.rigth-button {
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 10px;
+    z-index: 1;
+}
+.left-button {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+  }
+  
+  .rigth-button {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+  }
