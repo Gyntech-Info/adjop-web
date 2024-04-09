@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { EventosMock } from './shared/mocks/eventos-mock';
+import { HeaderMenu } from "./shared/utils/header-menu.const";
 
 @Component({
   selector: 'aw-root',
@@ -12,8 +13,8 @@ import { EventosMock } from './shared/mocks/eventos-mock';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'adjop-web';
-
   Eventos = EventosMock;
+  public title = 'adjop-web';
+  public headerMenu = HeaderMenu;
 }
 

@@ -1,6 +1,8 @@
-<div class="home">
+<div class="home flex flex-col">
   <div class="home__banner">
-    <aw-banner></aw-banner>
+    <aw-banner>
+      <img class="home__banner__image" [src]="imagePath" alt="" />
+    </aw-banner>
   </div>
   <div class="home__description">
     <aw-description></aw-description>

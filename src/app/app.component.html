@@ -2,9 +2,11 @@
   <div class="app__header">
     <aw-header>
       <ul class="app__header__nav">
-        <li><a routerLink="">Home</a></li>
-        <li><a routerLink="unidades">Unidades</a></li>
-        <li><a routerLink="departamentos">departamentos</a></li>
+        @for (item of headerMenu; track $index) {
+        <li>
+          <a [routerLink]="item.pathRoute">{{ item.name }}</a>
+        </li>
+        }
       </ul>
     </aw-header>
   </div>
