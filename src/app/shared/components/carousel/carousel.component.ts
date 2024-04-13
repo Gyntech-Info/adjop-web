@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { EventosMock } from '../../mocks/eventos-mock';
-import { interval } from 'rxjs';
+import { interval, observable, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 
@@ -28,6 +28,7 @@ export class CarouselComponent implements AfterContentInit {
   timeToStand!: number;
   secondsMissing!: number;
   timesScrolled = 0;
+  subscription: Subscription | undefined;
 
 
   ngAfterContentInit(): void {
@@ -37,11 +38,15 @@ export class CarouselComponent implements AfterContentInit {
   }
 
   startCount() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+
     this.totalItems = this.carrouselContainer?.nativeElement.querySelectorAll('.items').length;
     this.timeToStand = this.totalItems;
     const observable = interval(5000).pipe(take(this.timeToStand));
 
-    observable.subscribe(seconds => {
+    this.subscription = observable.subscribe(seconds => {
       this.secondsMissing = this.timeToStand - seconds;
       this.moveCarousel();
     })
@@ -77,5 +82,16 @@ export class CarouselComponent implements AfterContentInit {
     divElement.scrollLeft = 0;
     this.startCount();
   }
+
+  pauseCount() {
+    console.log('Pausa');
+    this.subscription?.unsubscribe();
+  }
+  
+  resumeCount() {
+    console.log('Recomeça')
+    this.startCount();
+  }
+  
 }
 

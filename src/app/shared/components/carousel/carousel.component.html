@@ -1,5 +1,5 @@
 <ng-container>
-  <div class="carrousel-container" #carrouselContainer>
+  <div class="carrousel-container" #carrouselContainer (mouseover)="pauseCount()" (mouseout)="resumeCount()">
     <div class="carrossel-buttons">
       <button class="left-button" type="button" (click)="moveTo(1)">
         < </button>
