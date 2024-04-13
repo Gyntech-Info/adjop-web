@@ -1,29 +1,26 @@
 <ng-container>
-    <div class="carrousel-container"  #carrouselContainer >
-      <div class="carrossel-buttons">
-        <button class="left-button" type="button" (click)="moveTo(1)">
-            < 
-            <!-- Usaremos fontawesome? -->
-        </button>
+  <div class="carrousel-container" #carrouselContainer>
+    <div class="carrossel-buttons">
+      <button class="left-button" type="button" (click)="moveTo(1)">
+        < </button>
+    </div>
+    <div class="carrossel-item">
+      @for(evento of eventos; track evento){
+      <div class="items">
+        <h2>{{ evento.titulo }}</h2>
+        <p>{{ evento.descricao }}</p>
+        <p>Data: {{ evento.data }}, Hora: {{ evento.hora }}</p>
+        <p>Local: {{ evento.local }}</p>
       </div>
-      <!-- <div [@slideInOut] class="carrossel-item"> -->
-      <div  class="carrossel-item">
-        @for(evento of eventos; track evento){
-          <div class="items">
-              <h2>{{ evento.titulo }}</h2>
-              <p>{{ evento.descricao }}</p>
-              <p>Data: {{ evento.data }}, Hora: {{ evento.hora }}</p>
-              <p>Local: {{ evento.local }}</p>
-          </div>
-        }
+      }
     </div>
     <div class="carrossel-buttons">
       <button class="rigth-button" type="button" (click)="moveTo(2)">
         >
-    </button>
+      </button>
     </div>
-    </div>
-  </ng-container>
+  </div>
+</ng-container>
   
 
   

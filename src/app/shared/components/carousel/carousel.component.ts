@@ -18,22 +18,22 @@ interface Evento {
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements  AfterContentInit {
-  
-  @ViewChild('carrouselContainer') carrouselContainer?: ElementRef; 
-  
+export class CarouselComponent implements AfterContentInit {
+
+  @ViewChild('carrouselContainer') carrouselContainer?: ElementRef;
+
   eventos = EventosMock;
-  currentIndex = signal(0); 
+  currentIndex = signal(0);
   totalItems!: number;
-  timeToStand! :number;
+  timeToStand!: number;
   secondsMissing!: number;
   timesScrolled = 0;
-    
-  
+
+
   ngAfterContentInit(): void {
-    setTimeout(()=>{
+    setTimeout(() => {
       this.startCount();
-    },3000)
+    }, 3000)
   }
 
   startCount() {
@@ -54,31 +54,28 @@ export class CarouselComponent implements  AfterContentInit {
   public moveTo(direction: number) {
     let carrosselItem = this.carrouselContainer?.nativeElement.querySelector('.items');
     if (!carrosselItem) return;
-    const largura = carrosselItem?.scrollWidth || 360; 
+    const largura = carrosselItem?.scrollWidth || 360;
     if (!direction || !largura) return;
 
-    const container = this.carrouselContainer?.nativeElement;   
+    const container = this.carrouselContainer?.nativeElement;
 
     if (direction === 1) {
-     container.scrollLeft -= largura as number;
-     this.timesScrolled += largura;
+      container.scrollLeft -= largura as number;
+      this.timesScrolled += largura;
 
-      } else {
-        container.scrollLeft += largura as number;
-        this.timesScrolled += container.scrollLeft;
-        if(this.timesScrolled > container.scrollWidth){
-          this.goBackFistSlide(container);
-        }
+    } else {
+      container.scrollLeft += largura as number;
+      this.timesScrolled += container.scrollLeft;
+      if (this.timesScrolled > container.scrollWidth) {
+        this.goBackFistSlide(container);
+      }
     }
   }
 
-  private goBackFistSlide(divElement: HTMLDivElement){
+  private goBackFistSlide(divElement: HTMLDivElement) {
     this.timesScrolled = 0
     divElement.scrollLeft = 0;
     this.startCount();
   }
-
-  
-
 }
 

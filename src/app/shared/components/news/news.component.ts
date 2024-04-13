@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselComponent } from "../../shared/components/carousel/carousel.component";
+import { CarouselComponent } from '../carousel/carousel.component';
+
 
 @Component({
     selector: 'aw-news',

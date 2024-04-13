@@ -5,11 +5,11 @@ import { NgModule } from "@angular/core";
     imports: [
         NoopAnimationsModule,
         BrowserAnimationsModule,
-        ],
-        exports:[
-            NoopAnimationsModule,
-            BrowserAnimationsModule
-        ]
+    ],
+    exports: [
+        NoopAnimationsModule,
+        BrowserAnimationsModule
+    ]
 }) export class CarouselModule {
 
 }

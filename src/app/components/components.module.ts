@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { DescriptionComponent } from './description/description.component';
-import { NewsComponent } from './news/news.component';
-import { VideosComponent } from './videos/videos.component';
-import { CarouselComponent } from '../shared/components/carousel/carousel.component';
+import { NgModule } from "@angular/core";
+import { AboutUsComponent } from "../shared/components/about-us/about-us.component";
+import { CarouselComponent } from "../shared/components/carousel/carousel.component";
+import { DescriptionComponent } from "../shared/components/description/description.component";
+import { NewsComponent } from "../shared/components/news/news.component";
+import { VideosComponent } from "../shared/components/videos/videos.component";
+
 
 @NgModule({
   imports: [
